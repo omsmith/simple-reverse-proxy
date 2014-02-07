@@ -1,0 +1,25 @@
+{
+  "name": "routing-proxy",
+  "version": "0.0.0",
+  "description": "A simple routing reverse-proxy",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:omsmith/routing-proxy.git"
+  },
+  "keywords": [
+    "reverse",
+    "proxy",
+    "node-http-proxy",
+    "router"
+  ],
+  "author": "Owen Smith <owen@omsmith.ca>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/omsmith/routing-proxy/issues"
+  },
+  "homepage": "https://github.com/omsmith/routing-proxy"
+}
