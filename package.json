@@ -1,6 +1,6 @@
 {
   "name": "routing-proxy",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A simple routing reverse-proxy",
   "main": "lib/index.js",
   "scripts": {
