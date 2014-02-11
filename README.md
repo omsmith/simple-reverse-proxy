@@ -1,13 +1,13 @@
-# routing-proxy
+# simple-reverse-proxy
 
 A simple routing reverse-proxy build on top of node-http-proxy
 
 ## Example
 ```
-var RoutingProxy = require('routing-proxy');
+var RoutingProxy = require('simple-reverse-proxy');
 
 new RoutingProxy({ agent: false })
-	.upstream('/', ['http://localhost:10001'])
+	.upstream('/', 'http://localhost:10001')
 	.upstream('/api', ['http://localhost:10002', 'http://localhost:10003'])
 	.listen(10000);
 
