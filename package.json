@@ -1,7 +1,7 @@
 {
   "name": "simple-reverse-proxy",
-  "version": "0.0.4",
-  "description": "A simple routing reverse-proxy",
+  "version": "1.0.0",
+  "description": "A simple reverse-proxy",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,8 +13,7 @@
   "keywords": [
     "reverse",
     "proxy",
-    "node-http-proxy",
-    "router"
+    "node-http-proxy"
   ],
   "author": "Owen Smith <owen@omsmith.ca>",
   "license": "MIT",
