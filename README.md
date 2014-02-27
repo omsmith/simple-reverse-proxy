@@ -1,21 +1,23 @@
 # simple-reverse-proxy
 
-A simple routing reverse-proxy build on top of node-http-proxy
+A simple reverse proxy that takes care of managing upstream servers.
+
+Built with [node-http-proxy](https://github.com/nodejitsu/node-http-proxy).
 
 ## Example
 ```
-var RoutingProxy = require('simple-reverse-proxy');
+var SimpleReverseProxy = require('simple-reverse-proxy');
 
-new RoutingProxy({ agent: false })
-	.upstream('/', 'http://localhost:10001')
-	.upstream('/api', ['http://localhost:10002', 'http://localhost:10003'])
+new SimpleReverseProxy([
+		'http://localhost:10001',
+		'http://localhost:10002',
+		'http://localhost:10003'
+	], {
+		agent: false
+	})
 	.listen(10000);
 
-startServer(10001);
-startServer(10002);
-startServer(10003);
-
-function startServer (port) {
+[10001, 10002, 10003].forEach(function (port) {
 	require('http')
 		.createServer(function (req, res) {
 			res.statusCode = 200;
@@ -24,5 +26,5 @@ function startServer (port) {
 			console.log(port);
 		})
 		.listen(port);
-}
+});
 ```
